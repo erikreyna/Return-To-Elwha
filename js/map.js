@@ -31,11 +31,6 @@ function initializeMap(){
 	//Target #map_canvas and store into map variable	
 	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	
-	var mapdiv = document.getElementById("map_canvas");
-	
-	mapdiv.style.width = '2400px';
-	mapdiv.style.height = '1200px';
-	
 	//Google API Polyline <-- This is where we store all coordinates, we create the markers at specified locations
 	var lineCoordinates = [
 		new google.maps.LatLng(47.577394233560945,-123.64700317382812),
@@ -250,7 +245,8 @@ function initializeMap(){
 		new google.maps.LatLng(47.990754586504785,-123.60344409942627),
 		new google.maps.LatLng(47.99523488612864,-123.60108375549316),
 		new google.maps.LatLng(47.99962864829864,-123.59975337982178),
-		new google.maps.LatLng(48.002844759872666,-123.60044002532959),
+		new google.maps.LatLng(48.002844759872666,-123.60044002532959), //THIS ONE
+		/*
 		new google.maps.LatLng(48.006922041650895,-123.59464645385742),
 		new google.maps.LatLng(48.00996543626931,-123.59005451202393),
 		new google.maps.LatLng(48.01438665185845,-123.59387397766113),
@@ -329,7 +325,7 @@ function initializeMap(){
 		new google.maps.LatLng(48.141692482218964,-123.56507778167725),
 		new google.maps.LatLng(48.14329612989035,-123.56293201446533),
 		new google.maps.LatLng(48.14544379382803,-123.56344699859619),
-		new google.maps.LatLng(48.14650327493638,-123.56679439544678) // Text - River Mouth Slideshow
+		new google.maps.LatLng(48.14650327493638,-123.56679439544678) // Text - River Mouth Slideshow */
 	];
 
 	//Create Google Marker, we can choose from circle, closed arrow and open arrow
@@ -366,7 +362,7 @@ function initializeMap(){
 	} //End for loop
 	
 } //End function "initializeMap()"
-
+/*
 function animateMarker() {
 			var count = 0;
 				offsetId = window.setInterval(function() {
@@ -379,16 +375,16 @@ function animateMarker() {
 					if(Math.ceil(count/2) == 100){
 						window.clearInterval(offsetId);
 					}
-				}, 400);
+				}, 20);
 		} //End function "animateMarker()"
-		
+*/		
 $(document).ready(function($){
 
 	//Create a popcorn instance by calling the Vimeo player plugin
 	var video = Popcorn('#elwha');
 	
 	//Play the video right away -- (seconds, function)
-	video.cue(1, animateMarker);
+	//video.cue(1, animateMarker);
 	
 	//Pause event
 	//video.on("pause", function(){ });
