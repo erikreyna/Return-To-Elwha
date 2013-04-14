@@ -4,9 +4,15 @@
 	left:0;
 	z-index: 999;
 }
-body {
-	background-color: #000;
+
+html,body
+{
+  background-color: #000;
+  min-height: 100%;
+  padding: 0px;
+  margin: 0px;
 }
+
 #map_canvas {
 	position: absolute;
 	width: 2400px;
