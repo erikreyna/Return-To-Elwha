@@ -65,7 +65,7 @@ $(document).ready(function () {
 
 	});
 
-vidpop = Popcorn("#elwha");
+var vidpop = Popcorn("#elwha");
  
 	
 
@@ -73,12 +73,12 @@ vidpop = Popcorn("#elwha");
 		start: 0,
 		onStart: function (options) {
 			$("#map_canvas").css({opacity: 0});
-			$("#gallery").css({opacity: 0});
+			// $("#gallery").css({opacity: 0});
 		}
 	});
 	//12: Vid reduce to 946px
 	 vidpop.code({ 
-	  start: 18,
+	  start: 551,
 	  onStart: function (options) {
 		$("#elwha").animate({
 			"width":946,
@@ -89,29 +89,15 @@ vidpop = Popcorn("#elwha");
 	  }
 	});
 	
-	vidpop.code({ // trying to unbind the window resize here, think about it a bit...
-		start: 22,
-		onStart: function (options) {
-			$('#elwha').css({
-				"width": 946 + "px", 
-				"height": 533 + "px", 
-				"position":"fixed", 
-				"top": $("#elwha").offset().top + "px",
-				"left": $("#elwha").offset().left + "px"
-			});
-		}
-	});
-	
-	
 	vidpop.code({
-		start: 21,
+		start: 551,
 		onStart: function (options) {
-			$("#map_canvas").animate({opacity: 1});
+			$("#map_canvas").animate({opacity: 1}, 2000);
 		}
 	});
 	
 	vidpop.code({
-	  start: 23,
+	  start: 555,
 	  onStart: function (options) {
 			var count = 0;
 				offsetId = window.setInterval(function() {
@@ -124,10 +110,10 @@ vidpop = Popcorn("#elwha");
 					if(Math.ceil(count/2) == 100){
 						window.clearInterval(offsetId);
 					}
-				}, 20);
+				}, 2000);
 	  }
 	});
-	
+	/*
 	vidpop.code({
 		start: 27,
 		end: 33,
@@ -137,6 +123,11 @@ vidpop = Popcorn("#elwha");
 		onEnd: function (options) {
 			$("#gallery").animate({opacity: 0}, 4000);
 		}
+	});
+	*/
+	
+	vidpop.cue( 42, function() {
+	    this.play( 525 );
 	});
 	
 	
