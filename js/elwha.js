@@ -123,15 +123,20 @@ var vidpop = Popcorn("#elwha");
 	
 	vidpop.code({
 		start: 553,
+		end: 578,
 		onStart: function(options){
 			$("#timelapse").animate({
 				width : 368,
 				height : 208,
 				opacity : 1, 
 				top : 320,
-				left : 870 
+				left : 860 
 				}, 2000);
+		},
+		onEnd: function(options){
+			$("#timelapse").fadeOut(500);
 		}
+		
 	});
 /*	
 	vidpop.code({
