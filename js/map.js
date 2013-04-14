@@ -21,6 +21,8 @@ function initializeMap(){
 	//Setup a marker with dummy content
 	var infowindow = new google.maps.InfoWindow({content: 'Holding...'});
 	
+	
+	
 	//Initial map options, including initial zoom, Google API reference
 	var myOptions = {
 		zoom: 11,

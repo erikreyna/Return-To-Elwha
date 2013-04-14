@@ -1,5 +1,6 @@
 var vidpop;
 $(document).ready(function () {
+	
 	var elwha = {
 
 	    full_bleed: function(boxWidth, boxHeight, imgWidth, imgHeight) {
