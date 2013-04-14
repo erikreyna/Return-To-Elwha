@@ -117,7 +117,7 @@ var vidpop = Popcorn("#elwha");
 	vidpop.code({
 		start: 553,
 		onStart: function () {
-			$("#timelapseContain").append('<video id=' + '"timelapse"' + 'controls autoplay><source src=' + '"/assets/glines_timelapse.mp4"' + 'type="video/mp4"' + '/></video>');
+			$("#timelapseContain").append('<video id=' + '"timelapse"' + 'autoplay><source src=' + '"/assets/glines_timelapse.mp4"' + 'type="video/mp4"' + '/></video>');
 		}
 	});
 	
