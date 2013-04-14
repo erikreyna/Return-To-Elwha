@@ -357,7 +357,7 @@ function initializeMap(){
 		path: lineCoordinates,
 	    icons: [{
 	      	icon: arrow,
-	      	offset: '0%'
+	      	offset: '0%' //CHANGE THIS TO 95 or 96% to start a few points before??
 	    }],
 	    map: map,
 		strokeColor: '#129CB0',

@@ -66,6 +66,7 @@ $(document).ready(function () {
 	});
 
 var vidpop = Popcorn("#elwha");
+var lapsepop = Popcorn("#timelapse");
  
 	
 
@@ -74,17 +75,18 @@ var vidpop = Popcorn("#elwha");
 		onStart: function (options) {
 			$("#map_canvas").css({opacity: 0});
 			// $("#gallery").css({opacity: 0});
+			$("#timelapse").css({opacity: 0});
 		}
 	});
 	//12: Vid reduce to 946px
 	 vidpop.code({ 
-	  start: 551,
+	  start: 549,
 	  onStart: function (options) {
 		$("#elwha").animate({
-			"width":946,
-			"height":533,
-			"top":270,
-			"left":90
+			"width":752,
+			"height":430,
+			"top":130,
+			"left":40
 			},4000);
 	  }
 	});
@@ -113,7 +115,33 @@ var vidpop = Popcorn("#elwha");
 				}, 2000);
 	  }
 	});
-	/*
+	
+	vidpop.code({
+		start: 553,
+		onStart: function(options){
+			$("#timelapse").animate({
+				width : 368,
+				height : 208,
+				opacity : 1, 
+				top : 320,
+				left : 830 
+				}, 2000);
+		}
+	});
+/*	
+	vidpop.code({
+		start: 553,
+		onStart: function(options){
+			$("#png").animate({
+			width :946,
+			height :533,
+			opacity : 1,	
+			top : 600,
+			left : 260
+			}, 2000);
+		}	
+	});
+	
 	vidpop.code({
 		start: 27,
 		end: 33,
