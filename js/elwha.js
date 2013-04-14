@@ -66,9 +66,6 @@ $(document).ready(function () {
 	});
 
 var vidpop = Popcorn("#elwha");
-var lapsepop = Popcorn("#timelapse");
- 
-	
 
 	vidpop.code({
 		start: 0,
@@ -86,7 +83,7 @@ var lapsepop = Popcorn("#timelapse");
 			"width":752,
 			"height":430,
 			"top":130,
-			"left":40
+			"left":90
 			},4000);
 	  }
 	});
@@ -116,6 +113,14 @@ var lapsepop = Popcorn("#timelapse");
 	  }
 	});
 	
+	
+	vidpop.code({
+		start: 553,
+		onStart: function () {
+			$("#timelapseContain").append('<video id=' + '"timelapse"' + 'controls autoplay><source src=' + '"/assets/glines_timelapse.mp4"' + 'type="video/mp4"' + '/></video>');
+		}
+	});
+	
 	vidpop.code({
 		start: 553,
 		onStart: function(options){
@@ -124,7 +129,7 @@ var lapsepop = Popcorn("#timelapse");
 				height : 208,
 				opacity : 1, 
 				top : 320,
-				left : 830 
+				left : 870 
 				}, 2000);
 		}
 	});
