@@ -98,7 +98,7 @@ var vidpop = Popcorn("#elwha");
 	vidpop.code({
 	  start: 555,
 	  onStart: function (options) {
-			var count = 0;
+			var count = 175;
 				offsetId = window.setInterval(function() {
 					count = (count + 1) % 200;
 	
@@ -123,6 +123,20 @@ var vidpop = Popcorn("#elwha");
 	
 	vidpop.code({
 		start: 553,
+		onStart: function(){
+			$("#texting").animate({
+				width : 368,
+				height : 50,
+				opacity : 1, 
+				top : 270,
+				right : 210 
+				}, 2000);
+			$("#texting").append('<a href=' + '"fancyhack.html"' + 'class=' + '"various"' + 'data-fancybox-type=' + '"iframe"' + '>The Engineering' + '"</a>');
+		}
+	});
+	
+	vidpop.code({
+		start: 553,
 		end: 578,
 		onStart: function(options){
 			$("#timelapse").animate({
@@ -130,11 +144,12 @@ var vidpop = Popcorn("#elwha");
 				height : 208,
 				opacity : 1, 
 				top : 320,
-				left : 860 
+				right : 210 
 				}, 2000);
 		},
 		onEnd: function(options){
 			$("#timelapse").fadeOut(500);
+			$('#texting').fadeOut(500);
 		}
 		
 	});

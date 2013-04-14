@@ -34,11 +34,18 @@ function initializeMap(){
 	//STAMEN MAPS
 	var layer = "watercolor";
 	var map = new google.maps.Map(document.getElementById("map_canvas"), {
-	    center: new google.maps.LatLng(47.83, -124),
+	    center: new google.maps.LatLng(47.920, -123.825),
 	    zoom: 11,
 		panControl: true,
 		zoomControl: true,
 	    mapTypeId: layer,
+		draggable: false,
+		disableDefaultUI: true,
+		disableDoubleClickZoom: true,
+		zoomControl: false,
+		scrollwheel: false,
+		mapTypeControl: false,
+		panControl: false,
 	    mapTypeControlOptions: {
 	        mapTypeIds: [layer]
 	    }
