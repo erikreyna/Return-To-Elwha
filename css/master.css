@@ -15,20 +15,13 @@ body {
 	left:-5%;
 	top:-5%;
 }
-.fancybox {
-	position: absolute;
-	right: 600px;
-	top: 490px;
-	width: 400px;
-}
-
-.center-unknown-width {
+.navigation {
   display: block;
   float: left;
   left: 50%;
   position: relative;
 }
-.center-unknown-width .center-unknown-width {
+.navigation .navigation_two {
   left: -50%;
 }
 nav {
