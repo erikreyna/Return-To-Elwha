@@ -362,6 +362,7 @@ function initializeMap(){
 	} //End for loop
 	
 } //End function "initializeMap()"
+
 /*
 function animateMarker() {
 			var count = 0;
@@ -378,9 +379,10 @@ function animateMarker() {
 				}, 20);
 		} //End function "animateMarker()"
 */		
+
 $(document).ready(function($){
 
-	//Create a popcorn instance by calling the Vimeo player plugin
+	//Create a popcorn instance by calling the HTML5 video player on the #elwha div
 	var video = Popcorn('#elwha');
 	
 	//Play the video right away -- (seconds, function)
