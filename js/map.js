@@ -24,14 +24,29 @@ function initializeMap(){
 	
 	
 	//Initial map options, including initial zoom, Google API reference
-	var myOptions = {
-		zoom: 11,
-		center: new google.maps.LatLng(47.773, -124),
-		mapTypeId: google.maps.MapTypeId.TERRAIN	
-	};
+	// var myOptions = {
+	// 	zoom: 11,
+	// 	center: new google.maps.LatLng(47.773, -124),
+	// 	mapTypeId: google.maps.MapTypeId.TERRAIN	
+	// };
+	
+	
+	//STAMEN MAPS
+	var layer = "watercolor";
+	var map = new google.maps.Map(document.getElementById("map_canvas"), {
+	    center: new google.maps.LatLng(47.773, -124),
+	    zoom: 11,
+		panControl: true,
+		zoomControl: true,
+	    mapTypeId: layer,
+	    mapTypeControlOptions: {
+	        mapTypeIds: [layer]
+	    }
+	});
+	map.mapTypes.set(layer, new google.maps.StamenMapType(layer));
 
 	//Target #map_canvas and store into map variable	
-	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	// var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	
 	//Google API Polyline <-- This is where we store all coordinates, we create the markers at specified locations
 	var lineCoordinates = [
@@ -334,7 +349,7 @@ function initializeMap(){
 	var arrow = {
 		path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
 		scale: 4,
-		strokeColor: '#000'
+		strokeColor: '#960E06'
 	};
 
 	//This sets up the circle marker on the line. Offset is equal to '0' because that's the starting point, '100' is the ending point	
@@ -345,7 +360,7 @@ function initializeMap(){
 	      	offset: '0%'
 	    }],
 	    map: map,
-		strokeColor: '#ffffff',
+		strokeColor: '#129CB0',
 		strokeOpacity: 0.8,
 		strokeWeight: 2
 	});
